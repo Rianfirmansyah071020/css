@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 200px;
+      height: 400px;
+      transition: 3s;
+      background: linear-gradient(
+        to top,
+        rgb(250, 249, 249),
+        rgb(244, 242, 242),
+        rgb(255, 255, 255)
+      );
+      box-shadow: -1px -1px 8px 4px rgba(206, 206, 206, 0.5);
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      box-shadow: -1px -1px 8px 4px rgba(154, 230, 248, 0.5);
+      background: linear-gradient(
+        to top,
+        rgba(197, 245, 245, 0.5),
+        rgb(244, 242, 242),
+        rgb(244, 242, 242)
+      );
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card"></div>
+    </div>
+  </body>
+</html>

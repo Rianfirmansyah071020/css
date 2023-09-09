@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      float: none;
+    }
+
+    .row {
+      margin-top: 20px;
+      /* display: flex; */
+      /* gap: 10px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .card {
+      width: 40%;
+      margin: 10px;
+      text-align: center;
+      border-radius: 6px;
+      float: left;
+      padding: 20px;
+      /* background-color: rgb(231, 231, 229); */
+      box-shadow: -1px -1px 2px 2px rgb(224, 223, 223);
+      transition: 1s;
+    }
+
+    .card:hover {
+      background-color: rgb(244, 247, 232);
+      transition: 0.5s;
+      background: linear-gradient(
+        to right,
+        rgba(0, 219, 222, 0.3),
+        rgba(252, 0, 255, 0.3),
+        rgba(43, 255, 0, 0.3)
+      );
+    }
+
+    .card:hover {
+      /* transform: rotate(2deg); */
+      transform: rotate(2deg);
+    }
+
+    .card .text-body {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        width: 100%;
+        flex-wrap: wrap;
+        transition: 1s;
+      }
+
+      .card .title {
+        font-size: 15px;
+        transition: 1s;
+      }
+
+      .card .text-body {
+        font-size: small;
+        transition: 1s;
+      }
+    }
+  </style>
+  <body>
+    <div class="row">
+      <div class="card">
+        <h3 class="title">Judul 1</h3>
+        <p class="text-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+          dignissimos.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="title">Judul 2</h3>
+        <p class="text-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+          dignissimos.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="title">Judul 3</h3>
+        <p class="text-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+          dignissimos.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="title">Judul 4</h3>
+        <p class="text-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+          dignissimos.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="title">Judul 5</h3>
+        <p class="text-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+          dignissimos.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

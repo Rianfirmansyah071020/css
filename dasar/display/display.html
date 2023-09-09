@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .card {
+      width: 40rem;
+      height: 90rem;
+      border: 1px solid black;
+    }
+
+    .card .card-contet-1 {
+      position: relative;
+      margin-left: 100px;
+      border: 1px solid black;
+      width: max-content;
+    }
+
+    /* .card .card-contet-2 {
+      position: fixed;
+      border: 1px solid black;
+      width: 100%;
+    } */
+
+    /* membuat posisi lengket */
+
+    .card .card-contet-2 {
+      position: sticky;
+      border: 1px solid black;
+      width: 100%;
+      top: 0;
+    }
+  </style>
+  <body>
+    <div class="card">
+      <div class="card-contet-1">
+        <p>text content 1</p>
+      </div>
+      <div class="card-contet-2">
+        <p>text content 2</p>
+      </div>
+    </div>
+  </body>
+</html>

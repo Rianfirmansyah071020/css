@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <style>
+    * {
+      font-family: "Poppins";
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .row .card-produk {
+      float: left;
+      padding: 10px;
+      transition: 0.7s;
+      opacity: 0.9;
+      position: relative;
+
+      background: linear-gradient(
+        to top,
+        rgb(244, 251, 252),
+        rgb(222, 253, 254)
+      );
+      width: 260px;
+      border-radius: 10px;
+    }
+
+    .row .card-produk:hover {
+      box-shadow: -1px -1px 10px 2px rgba(92, 225, 245, 0.8);
+      opacity: 1;
+    }
+
+    .row .card-produk .image-produk {
+      width: 260px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .row .card-produk .detail-produk {
+      line-height: 10px;
+    }
+
+    .row .card-produk .detail-produk .nama-produk {
+      font-weight: 500;
+      /* text-decoration: underline; */
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 15px;
+      margin-left: -10px;
+      margin-right: -10px;
+      text-align: center;
+      background: linear-gradient(
+        to right,
+        rgba(185, 243, 250, 0.7),
+        rgba(27, 212, 225, 0.7),
+        rgba(185, 243, 250, 0.7)
+      );
+    }
+
+    .pesan {
+      display: none;
+      transition: 4s;
+    }
+
+    .nama-produk:hover .pesan {
+      display: block;
+      position: absolute;
+      font-size: 10px;
+      z-index: 1;
+      background: rgba(24, 23, 23, 0.4);
+      color: white;
+      padding: 9px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      /* margin-top: -15px;
+      margin-left: 75px; */
+    }
+
+    .row .card-produk .detail-produk .harga-produk {
+      font-weight: 500;
+      color: red;
+      margin-top: 25px;
+    }
+
+    .row .card-produk .detail-produk .deskripsi {
+      font-weight: 300;
+      font-size: 13px;
+    }
+
+    .diskon {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px;
+      background-color: rgba(246, 246, 75, 0.9);
+      /* border-bottom-right-radius: 15px; */
+      right: 0;
+      margin-right: 10px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .like {
+      margin-top: 25px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+
+    .total-like {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    .masking {
+      mask-image: linear-gradient(to bottom, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    @media screen and (max-width: 600px) {
+      .row .card-produk {
+        width: 100px;
+      }
+
+      .row .card-produk .image-produk {
+        width: 100px;
+      }
+
+      .row .card-produk .detail-produk {
+        line-height: 1.5;
+      }
+
+      .row .card-produk .detail-produk .nama-produk {
+        font-size: 12px;
+        padding: 4px;
+      }
+      .row .card-produk .detail-produk .harga-produk {
+        font-size: 13px;
+      }
+
+      .row .card-produk .detail-produk .deskripsi {
+        font-size: 11px;
+      }
+
+      .diskon {
+        font-size: 7px;
+        padding: 4px;
+      }
+
+      .like {
+        font-size: 10px;
+      }
+
+      .total-like {
+        font-size: 10px;
+      }
+    }
+  </style>
+  <body>
+    <div class="row">
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">30%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk1.jpg" alt="" class="image-produk" />
+        </div>
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">40%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk2.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">25%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk3.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">30%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk1.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">30%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk1.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+      <div class="card-produk">
+        <span class="diskon"> DISKON <span style="color: red">30%</span></span>
+        <div class="masking">
+          <img src="../dasar/asset/produk1.jpg" alt="" class="image-produk" />
+        </div>
+
+        <div class="detail-produk">
+          <h3 class="nama-produk">
+            Sepatu Satu <span class="pesan">Ayo Beli</span>
+          </h3>
+          <h3 class="harga-produk">Rp 200.000</h3>
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="like">❤️ <span class="total-like">100k</span></div>
+      </div>
+    </div>
+  </body>
+</html>

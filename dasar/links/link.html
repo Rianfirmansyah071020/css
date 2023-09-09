@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 
+    a:hover:berubah saat mouse berada diatas font
+
+    a:visited- tautan yang telah dikunjungi pengguna
+
+    a:link- tautan normal yang belum dikunjungi
+
+    a:active- tautan saat diklik
+   -->
+
+  <style>
+    .link:hover {
+      color: red;
+      background-color: black;
+    }
+
+    .link:visited {
+      color: red;
+      background-color: black;
+      padding: 5px;
+      width: max-content;
+    }
+
+    .link:link {
+      color: blue;
+    }
+
+    .link:active {
+      color: rgb(250, 249, 250);
+      background-color: blue;
+    }
+
+    .link {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <a href="" class="link">Ini text link</a>
+  </body>
+</html>

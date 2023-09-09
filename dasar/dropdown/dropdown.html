@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box-dropdown h2 {
+      background-color: rgb(197, 176, 107);
+      padding: 10px;
+      width: max-content;
+    }
+
+    .box-dropdown:hover .content-dropdown {
+      display: block;
+    }
+
+    .content-dropdown li a {
+      text-decoration: none;
+    }
+
+    .content-dropdown li:hover {
+      background-color: rgb(199, 198, 198);
+      color: white;
+      transition: 0.3s;
+    }
+
+    .content-dropdown {
+      background-color: whitesmoke;
+      /* width: max-content; */
+      padding: 10px;
+      box-shadow: 0.2px 0.4px 7px black;
+      display: none;
+      position: absolute;
+      margin-top: -20px;
+      z-index: 1;
+    }
+
+    .content-dropdown li {
+      list-style: none;
+      padding: 10px;
+      left: 0;
+    }
+  </style>
+  <body>
+    <div class="box-dropdown">
+      <h2>Drop Down</h2>
+      <ul class="content-dropdown">
+        <li><a href="">Ini text 1</a></li>
+        <li><a href="">Ini text 2</a></li>
+        <li><a href="">Ini text 3</a></li>
+        <li><a href="">Ini text 4</a></li>
+        <li><a href="">Ini text 5</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
