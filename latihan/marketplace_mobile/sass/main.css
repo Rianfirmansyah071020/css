@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -175,7 +176,7 @@ body {
   align-items: center;
 }
 .container-mobile .footer .text-footer {
-  color: gray;
+  color: rgb(179, 176, 176);
   font-size: 10px;
 }
 
