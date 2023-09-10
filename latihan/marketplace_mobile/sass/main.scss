@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-mobile {
+  width: 400px;
+
+  //   start hero
+  .hero {
+    mask-image: linear-gradient(to bottom, rgb(14, 13, 13) 70%, transparent);
+  }
+  //   start card produk laris
+  .produk-laris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 2s;
+
+    margin-top: 5%;
+
+    .card-produk-laris {
+      width: 125px;
+      float: left;
+      padding: 5px;
+      box-shadow: 1px 0px 7px 1px rgb(223, 223, 223);
+      margin: 1%;
+      border-radius: 5px;
+      transition: 2s;
+
+      .box-image-produk {
+        mask-image: linear-gradient(
+          to bottom,
+          rgb(161, 158, 158) 60%,
+          transparent
+        );
+      }
+
+      .image-produk-laris {
+        width: 110px;
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .card-produk-detail {
+        margin-top: 5%;
+
+        .nama-produk {
+          font-weight: 600;
+          font-size: 12px;
+          background: linear-gradient(
+            to right,
+            rgb(207, 179, 16),
+            rgb(243, 216, 66)
+          );
+          padding: 5px;
+          margin-left: -5px;
+          margin-right: -5px;
+          text-align: center;
+          text-shadow: 1px 0px 1px rgb(236, 235, 235);
+        }
+
+        .harga-produk {
+          font-weight: 500;
+          font-size: 11px;
+          color: rgb(195, 155, 11);
+        }
+
+        .deskripsi-produk {
+          font-weight: 300;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .nav-logo {
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    position: sticky;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    // border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 0px 7px 1px rgb(228, 226, 226);
+
+    .text-nav-logo {
+      color: rgb(207, 179, 16);
+      font-weight: 500;
+      font-size: 15px;
+      text-shadow: 1px 0px 2px white;
+      margin-top: 10px;
+
+      .text-logo {
+        font-size: 11px;
+        color: rgb(245, 247, 247);
+        text-shadow: 1px 0px 1px rgb(15, 15, 15);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container-mobile {
+    width: 300px;
+    transition: 1s;
+
+    .produk-laris {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: 1s;
+
+      margin-top: 5%;
+
+      .card-produk-laris {
+        width: 100%;
+        float: left;
+        padding: 5px;
+        box-shadow: 1px 0px 7px 1px rgb(223, 223, 223);
+        margin: 1%;
+        border-radius: 5px;
+        transition: 1s;
+
+        .box-image-produk {
+          mask-image: linear-gradient(
+            to bottom,
+            rgb(161, 158, 158) 60%,
+            transparent
+          );
+        }
+
+        .image-produk-laris {
+          width: 100%;
+          border-radius: 5px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .card-produk-detail {
+          margin-top: 5%;
+
+          .nama-produk {
+            font-weight: 600;
+            font-size: 16px;
+            background: linear-gradient(
+              to right,
+              rgb(207, 179, 16),
+              rgb(243, 216, 66)
+            );
+            padding: 5px;
+            margin-left: -5px;
+            margin-right: -5px;
+            text-align: center;
+            text-shadow: 1px 0px 1px rgb(236, 235, 235);
+          }
+
+          .harga-produk {
+            font-weight: 500;
+            font-size: 15px;
+            color: rgb(195, 155, 11);
+          }
+
+          .deskripsi-produk {
+            font-weight: 300;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
